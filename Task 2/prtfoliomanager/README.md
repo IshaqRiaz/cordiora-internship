@@ -7,17 +7,17 @@ A comprehensive RESTful API for managing user portfolios with JWT authentication
 
 ## ✨ Features
 
-- ✅ **User Registration & Login** – Secure JWT token-based authentication
-- 📁 **Full CRUD for Projects** – Create, Read, Update, Delete projects
-- 👤 **Portfolio Information** – Personal info, about, contact, social media links
-- 🛠️ **Skills Management** – Add, update, delete skills with proficiency levels
-- 🏷️ **Project Categories** – Categorize projects (Web, Mobile, Design, Data, custom)
-- 🔍 **Search Functionality** – Search projects by name, technology, or category
-- 📊 **Dashboard Statistics** – Total projects, skills, category breakdowns
-- 📖 **Swagger Documentation** – Interactive API docs at `/api/docs`
-- 🔒 **User Isolation** – Each user sees only their own data
-- 🔐 **Password Hashing** – Secured with bcrypt
-- 🗄️ **SQLite Database** – Ready to switch to PostgreSQL for production
+- ✅ **User Registration & Login** 🔑 – Secure JWT token-based authentication
+- 📁 **Full CRUD for Projects** 📂 – Create, Read, Update, Delete projects
+- 👤 **Portfolio Information** 📝 – Personal info, about, contact, social media links
+- 🛠️ **Skills Management** 📈 – Add, update, delete skills with proficiency levels
+- 🏷️ **Project Categories** 📂 – Categorize projects (Web, Mobile, Design, Data, custom)
+- 🔍 **Search Functionality** ⚡ – Search projects by name, technology, or category
+- 📊 **Dashboard Statistics** 📈 – Total projects, skills, category breakdowns
+- 📖 **Swagger Documentation** 📘 – Interactive API docs at `/api/docs`
+- 🔒 **User Isolation** 👤 – Each user sees only their own data
+- 🔐 **Password Hashing** 🛡️ – Secured with bcrypt
+- 🗄️ **SQLite Database** 💾 – Ready to switch to PostgreSQL for production
 
 ---
 
@@ -37,17 +37,17 @@ A comprehensive RESTful API for managing user portfolios with JWT authentication
 
 ```
 portfolio_manager/
-├── app.py              # App factory & entry point
-├── config.py           # Configuration settings
-├── models.py           # User, Portfolio, Project, Skill, Category models
-├── auth.py             # Register & login routes
-├── routes.py           # All CRUD routes (portfolio, skills, categories, projects, search, dashboard)
-├── swagger.py          # Swagger UI blueprint setup
-├── requirements.txt    # Python dependencies
-├── test.http           # Example requests (VS Code REST Client)
+├── app.py              # App factory & entry point 🚀
+├── config.py           # Configuration settings ⚙️
+├── models.py           # User, Portfolio, Project, Skill, Category models 🗃️
+├── auth.py             # Register & login routes 🔑
+├── routes.py           # All CRUD routes (portfolio, skills, categories, projects, search, dashboard) 📂
+├── swagger.py          # Swagger UI blueprint setup 📖
+├── requirements.txt    # Python dependencies 📦
+├── test.http           # Example requests (VS Code REST Client) 🧪
 ├── .gitignore
 └── static/
-    └── swagger.json    # OpenAPI specification
+    └── swagger.json    # OpenAPI specification 📘
 ```
 
 ---
@@ -225,27 +225,28 @@ curl "http://127.0.0.1:5000/projects/search?q=ecommerce&tech=React" \
 
 ### Week 2 Enhancements
 
-- ✅ **Portfolio Information API** – Personal info, about, contact, social
-- ✅ **Skills Management API** – Full CRUD with proficiency and category
-- ✅ **Project Categories** – 4 default + custom categories
-- ✅ **Search Functionality** – By name, technology, category
-- ✅ **Dashboard Statistics API** – Project/skill counts, category breakdown
-- ✅ **Swagger Documentation** – Interactive API docs
+- ✅ **Portfolio Information API** 👤 – Personal info, about, contact, social
+- ✅ **Skills Management API** 🛠️ – Full CRUD with proficiency and category
+- ✅ **Project Categories** 🏷️ – 4 default + custom categories
+- ✅ **Search Functionality** 🔍 – By name, technology, category
+- ✅ **Dashboard Statistics API** 📊 – Project/skill counts, category breakdown
+- ✅ **Swagger Documentation** 📖 – Interactive API docs
+
 
 ---
 
 ## 📚 What I Learned
 
-- 🌐 **Flask Framework** – Building RESTful APIs with Blueprints for modular code
-- 🔑 **JWT Authentication** – Implementing secure token-based user login/registration
-- 🔒 **Password Hashing** – Using bcrypt to securely store user passwords
-- 🗃️ **SQLAlchemy ORM** – Creating database models with relationships (one-to-many, many-to-one)
-- 🏗️ **API Design** – Structuring endpoints with proper HTTP methods and status codes
-- ⚠️ **Error Handling** – Managing exceptions and returning meaningful responses
-- 🧪 **Testing APIs** – Using VS Code REST Client and curl to test endpoints
-- 📂 **Project Structure** – Organizing code into separate files for maintainability
-- 📖 **API Documentation** – Setting up Swagger UI with OpenAPI specification
-- 💼 **Real-World Workflow** – Following task requirements and meeting evaluation criteria
+- 🌐 **Flask Framework** 🐍 – Building RESTful APIs with Blueprints for modular code
+- 🔑 **JWT Authentication** 🛡️ – Implementing secure token-based user login/registration
+- 🔒 **Password Hashing** 🔐 – Using bcrypt to securely store user passwords
+- 🗃️ **SQLAlchemy ORM** 📂 – Creating database models with relationships
+- 🏗️ **API Design** 📡 – Structuring endpoints with proper HTTP methods and status codes
+- ⚠️ **Error Handling** 🛠️ – Managing exceptions and returning meaningful responses
+- 🧪 **Testing APIs** 🔍 – Using VS Code REST Client and curl to test endpoints
+- 📂 **Project Structure** 🏗️ – Organizing code into separate files for maintainability
+- 📖 **API Documentation** 📘 – Setting up Swagger UI with OpenAPI specification
+- 💼 **Real-World Workflow** 🚀 – Following task requirements and meeting evaluation criteria
 
 ---
 
