@@ -1,0 +1,45 @@
+### Register
+POST http://127.0.0.1:5000/register
+Content-Type: application/json
+
+{
+    "username": "john",
+    "password": "secret123"
+}
+
+### Login
+POST http://127.0.0.1:5000/login
+Content-Type: application/json
+
+{
+    "username": "john",
+    "password": "secret123"
+}
+
+### Add Project
+POST http://127.0.0.1:5000/projects
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4MTI1MjE4MCwianRpIjoiOTFkMDA0MmEtMTA2Mi00NTVjLTk1MmItNmZiNjNkOGU5NDM5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODEyNTIxODB9.ts9j38UBa8ZYi15nyoKxr8SgikrXD7hBJSd04d0__s8
+
+{
+    "name": "My Project",
+    "description": "Test project",
+    "technologies": "Python, Flask"
+}
+
+### Get All Projects
+GET http://127.0.0.1:5000/projects
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4MTI1MjE4MCwianRpIjoiOTFkMDA0MmEtMTA2Mi00NTVjLTk1MmItNmZiNjNkOGU5NDM5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODEyNTIxODB9.ts9j38UBa8ZYi15nyoKxr8SgikrXD7hBJSd04d0__s8
+
+### Update Project (change 1 to actual id)
+PUT http://127.0.0.1:5000/projects/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4MTI1MjE4MCwianRpIjoiOTFkMDA0MmEtMTA2Mi00NTVjLTk1MmItNmZiNjNkOGU5NDM5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODEyNTIxODB9.ts9j38UBa8ZYi15nyoKxr8SgikrXD7hBJSd04d0__s8
+
+{
+    "name": "Updated Name"
+}
+
+### Delete Project
+DELETE http://127.0.0.1:5000/projects/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4MTI1MjE4MCwianRpIjoiOTFkMDA0MmEtMTA2Mi00NTVjLTk1MmItNmZiNjNkOGU5NDM5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODEyNTIxODB9.ts9j38UBa8ZYi15nyoKxr8SgikrXD7hBJSd04d0__s8
