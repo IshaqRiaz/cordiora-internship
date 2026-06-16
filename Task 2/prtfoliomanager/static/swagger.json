@@ -1,0 +1,122 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Portfolio Manager API",
+    "description": "Complete API for portfolio management with projects, skills, categories, search, and dashboard stats.",
+    "version": "2.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000",
+      "description": "Development server"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "BearerAuth": []
+    }
+  ],
+  "paths": {
+    "/register": {
+      "post": {
+        "summary": "Register a new user",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": { "type": "string" },
+                  "password": { "type": "string" }
+                },
+                "required": ["username", "password"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": { "description": "User created" },
+          "409": { "description": "Username already exists" }
+        }
+      }
+    },
+    "/login": {
+      "post": {
+        "summary": "Login and get JWT token",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": { "type": "string" },
+                  "password": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "JWT token returned" },
+          "401": { "description": "Invalid credentials" }
+        }
+      }
+    },
+    "/portfolio": {
+      "get": {
+        "summary": "Get current user's portfolio"
+      },
+      "put": {
+        "summary": "Create or update portfolio"
+      }
+    },
+    "/skills": {
+      "get": { "summary": "Get all skills of current user" },
+      "post": { "summary": "Add a new skill" }
+    },
+    "/skills/{id}": {
+      "put": { "summary": "Update a skill" },
+      "delete": { "summary": "Delete a skill" }
+    },
+    "/categories": {
+      "get": { "summary": "Get all project categories" },
+      "post": { "summary": "Create a new category" }
+    },
+    "/categories/{id}": {
+      "put": { "summary": "Update a category" },
+      "delete": { "summary": "Delete a category" }
+    },
+    "/projects": {
+      "get": { "summary": "Get all projects of current user" },
+      "post": { "summary": "Create a new project" }
+    },
+    "/projects/{id}": {
+      "put": { "summary": "Update a project" },
+      "delete": { "summary": "Delete a project" }
+    },
+    "/projects/search": {
+      "get": {
+        "summary": "Search projects by name, technology, or category",
+        "parameters": [
+          { "name": "q", "in": "query", "description": "Search by name/description" },
+          { "name": "tech", "in": "query", "description": "Filter by technology" },
+          { "name": "category", "in": "query", "description": "Filter by category name" }
+        ]
+      }
+    },
+    "/dashboard/stats": {
+      "get": {
+        "summary": "Get dashboard statistics (project count, skill count, category breakdown)"
+      }
+    }
+  }
+}

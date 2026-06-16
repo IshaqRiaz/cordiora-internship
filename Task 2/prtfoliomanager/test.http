@@ -1,0 +1,116 @@
+### Register
+POST http://127.0.0.1:5000/register
+Content-Type: application/json
+
+{
+    "username": "john",
+    "password": "secret123"
+}
+
+### Login (copy the token from response)
+POST http://127.0.0.1:5000/login
+Content-Type: application/json
+
+{
+    "username": "john",
+    "password": "secret123"
+}
+
+### Update Portfolio
+PUT http://127.0.0.1:5000/portfolio
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4MTYxMTE5MSwianRpIjoiNzU3OGJmODItODlmYy00MjhhLTg3YWItMDRhNjY1ZTEzYzczIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODE2MTExOTEsImV4cCI6MTc4MTY5NzU5MX0.xfMToBOSxigOXTd2tZCHDAoVqPwZRPHn_MRt96ktWNE
+
+{
+    "full_name": "Muhammad Ishaq",
+    "email": "ishaqriaz12345@gmail.com",
+    "phone": "+923055161153",
+    "location": "Lahore, Pakistan",
+    "title": "Python & Backend Developer",
+    "about": "Experienced developer with 5 years in web development",
+    "experience_years": 5,
+    "github": "https://github.com/ishaqriaz12345",
+    "linkedin": "https://linkedin.com/in/ishaqriaz ",
+    "twitter": "https://twitter.com/ishaqriaz",
+    "website": "https://johndoe.com"
+}
+
+### Get Portfolio
+GET http://127.0.0.1:5000/portfolio
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4MTYxMTE5MSwianRpIjoiNzU3OGJmODItODlmYy00MjhhLTg3YWItMDRhNjY1ZTEzYzczIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODE2MTExOTEsImV4cCI6MTc4MTY5NzU5MX0.xfMToBOSxigOXTd2tZCHDAoVqPwZRPHn_MRt96ktWNE
+
+### Add Skill
+POST http://127.0.0.1:5000/skills
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4MTYxMTE5MSwianRpIjoiNzU3OGJmODItODlmYy00MjhhLTg3YWItMDRhNjY1ZTEzYzczIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODE2MTExOTEsImV4cCI6MTc4MTY5NzU5MX0.xfMToBOSxigOXTd2tZCHDAoVqPwZRPHn_MRt96ktWNE
+
+{
+    "name": "Python",
+    "proficiency": 90,
+    "category": "Backend"
+}
+
+### Get All Skills
+GET http://127.0.0.1:5000/skills
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4MTYxMTE5MSwianRpIjoiNzU3OGJmODItODlmYy00MjhhLTg3YWItMDRhNjY1ZTEzYzczIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODE2MTExOTEsImV4cCI6MTc4MTY5NzU5MX0.xfMToBOSxigOXTd2tZCHDAoVqPwZRPHn_MRt96ktWNE
+
+### Update Skill (replace 1 with actual skill ID)
+PUT http://127.0.0.1:5000/skills/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4MTYxMTE5MSwianRpIjoiNzU3OGJmODItODlmYy00MjhhLTg3YWItMDRhNjY1ZTEzYzczIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODE2MTExOTEsImV4cCI6MTc4MTY5NzU5MX0.xfMToBOSxigOXTd2tZCHDAoVqPwZRPHn_MRt96ktWNE
+
+{
+    "name": "Python",
+    "proficiency": 95,
+    "category": "Backend"
+}
+
+### Delete Skill (replace 1)
+DELETE http://127.0.0.1:5000/skills/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4MTYxMTE5MSwianRpIjoiNzU3OGJmODItODlmYy00MjhhLTg3YWItMDRhNjY1ZTEzYzczIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODE2MTExOTEsImV4cCI6MTc4MTY5NzU5MX0.xfMToBOSxigOXTd2tZCHDAoVqPwZRPHn_MRt96ktWNE
+
+### Get Categories (should show default ones)
+GET http://127.0.0.1:5000/categories
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4MTYxMTE5MSwianRpIjoiNzU3OGJmODItODlmYy00MjhhLTg3YWItMDRhNjY1ZTEzYzczIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODE2MTExOTEsImV4cCI6MTc4MTY5NzU5MX0.xfMToBOSxigOXTd2tZCHDAoVqPwZRPHn_MRt96ktWNE
+
+### Create Custom Category
+POST http://127.0.0.1:5000/categories
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4MTYxMTE5MSwianRpIjoiNzU3OGJmODItODlmYy00MjhhLTg3YWItMDRhNjY1ZTEzYzczIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODE2MTExOTEsImV4cCI6MTc4MTY5NzU5MX0.xfMToBOSxigOXTd2tZCHDAoVqPwZRPHn_MRt96ktWNE
+
+{
+    "name": "Machine Learning",
+    "description": "ML and AI projects"
+}
+
+### Add Project with Category
+POST http://127.0.0.1:5000/projects
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4MTYxMTE5MSwianRpIjoiNzU3OGJmODItODlmYy00MjhhLTg3YWItMDRhNjY1ZTEzYzczIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODE2MTExOTEsImV4cCI6MTc4MTY5NzU5MX0.xfMToBOSxigOXTd2tZCHDAoVqPwZRPHn_MRt96ktWNE
+
+{
+    "name": "E-commerce Platform",
+    "description": "Full-stack e-commerce application",
+    "technologies": "Python, Flask, React, PostgreSQL",
+    "category": "Web Development",
+    "github_link": "https://github.com/johndoe/ecommerce",
+    "live_link": "https://ecommerce-demo.com",
+    "start_date": "2024-01-01",
+    "end_date": "2024-03-15"
+}
+
+### Search Projects by Name
+GET http://127.0.0.1:5000/projects/search?q=ecommerce
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4MTYxMTE5MSwianRpIjoiNzU3OGJmODItODlmYy00MjhhLTg3YWItMDRhNjY1ZTEzYzczIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODE2MTExOTEsImV4cCI6MTc4MTY5NzU5MX0.xfMToBOSxigOXTd2tZCHDAoVqPwZRPHn_MRt96ktWNE
+
+### Search Projects by Technology
+GET http://127.0.0.1:5000/projects/search?tech=React
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4MTYxMTE5MSwianRpIjoiNzU3OGJmODItODlmYy00MjhhLTg3YWItMDRhNjY1ZTEzYzczIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODE2MTExOTEsImV4cCI6MTc4MTY5NzU5MX0.xfMToBOSxigOXTd2tZCHDAoVqPwZRPHn_MRt96ktWNE
+
+### Search Projects by Category
+GET http://127.0.0.1:5000/projects/search?category=Web Development
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4MTYxMTE5MSwianRpIjoiNzU3OGJmODItODlmYy00MjhhLTg3YWItMDRhNjY1ZTEzYzczIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODE2MTExOTEsImV4cCI6MTc4MTY5NzU5MX0.xfMToBOSxigOXTd2tZCHDAoVqPwZRPHn_MRt96ktWNE
+
+### Get Dashboard Stats
+GET http://127.0.0.1:5000/dashboard/stats
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc4MTYxMTE5MSwianRpIjoiNzU3OGJmODItODlmYy00MjhhLTg3YWItMDRhNjY1ZTEzYzczIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3ODE2MTExOTEsImV4cCI6MTc4MTY5NzU5MX0.xfMToBOSxigOXTd2tZCHDAoVqPwZRPHn_MRt96ktWNE
